@@ -1,0 +1,2 @@
+/** @type {import('tailwindcss').Config} */
+export default { content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"], theme: { extend: { fontFamily: { sans: ["Nunito", "sans-serif"], display: ["Bowlby One SC", "sans-serif"] }, colors: { ink: "#201a38", cream: "#fff8e8", grape: "#7147e8", coral: "#ff5e57", lime: "#c8f560" }, boxShadow: { pop: "0 8px 0 #201a38", soft: "0 18px 60px rgba(32,26,56,.18)" } } }, plugins: [] };

@@ -1,0 +1,1 @@
+export function Lives({ count }: { count: number }) { return <span className="whitespace-nowrap" aria-label={`${count} vidas`}>{count ? Array.from({ length: count }, (_, i) => <span key={i}>❤️</span>) : <span className="font-black text-ink/45">0 vidas</span>}</span>; }

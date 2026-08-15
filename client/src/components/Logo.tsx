@@ -1,0 +1,1 @@
+export function Logo({ small = false }: { small?: boolean }) { return <div className={`font-display tracking-tight text-ink ${small ? "text-3xl" : "text-5xl sm:text-7xl"}`}>DUVIDO<span className="text-coral">!</span></div>; }

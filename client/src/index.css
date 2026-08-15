@@ -1,0 +1,16 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root { font-family: Nunito, sans-serif; color: #201a38; background: #f1e9ff; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: radial-gradient(circle at 12% 18%, rgba(200,245,96,.6), transparent 22rem), radial-gradient(circle at 88% 82%, rgba(255,94,87,.35), transparent 25rem), linear-gradient(135deg,#f8f1ff,#e9ddff); }
+body::before { content:"?"; position:fixed; right:-2rem; top:-7rem; font: 25rem/1 "Bowlby One SC"; color:rgba(113,71,232,.06); transform:rotate(12deg); pointer-events:none; }
+button, input, select, textarea { font: inherit; }
+button { cursor:pointer; }
+input[type="number"] { appearance:textfield; -moz-appearance:textfield; }
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { appearance:none; margin:0; }
+@keyframes reveal { 0% { opacity:0; transform:scale(.82) rotate(-2deg) } 70% { transform:scale(1.03) rotate(.5deg) } 100% { opacity:1; transform:scale(1) } }
+@keyframes float { 50% { transform:translateY(-10px) rotate(3deg) } }
+@keyframes loader { from { transform:translateX(-100%) } to { transform:translateX(200%) } }
+.animate-reveal { animation:reveal .55s cubic-bezier(.2,.8,.2,1) both; }
+.animate-float { animation:float 1.5s ease-in-out infinite; }
+.animate-loader { animation:loader 1.2s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; scroll-behavior:auto!important; } }
