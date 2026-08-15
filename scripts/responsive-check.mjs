@@ -22,14 +22,17 @@ for (const viewport of viewports) {
   }));
   await page.goto("http://localhost:5173", { waitUntil: "networkidle" });
   await page.screenshot({ path: `.artifacts/responsive/${viewport.name}-home.png`, fullPage: true });
+  await page.getByLabel("Quantidade de jogadores").selectOption("4");
   await page.getByLabel("Jogador 1").fill("Igor");
   await page.getByLabel("Jogador 2").fill("Julia");
+  await page.getByLabel("Jogador 3").fill("Bia");
+  await page.getByLabel("Jogador 4").fill("Caio");
   await page.getByRole("button", { name: /começar partida/i }).click();
   await page.getByText(/quantas ilhas/i).waitFor();
   await page.screenshot({ path: `.artifacts/responsive/${viewport.name}-game.png`, fullPage: true });
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
   if (overflow) throw new Error(`Overflow horizontal em ${viewport.name}`);
-  await page.getByPlaceholder("Digite seu palpite").fill("7000");
+  await page.getByPlaceholder("Seu palpite").fill("7000");
   await page.getByRole("button", { name: /dar palpite/i }).click();
   await page.getByRole("button", { name: /duvido/i }).click();
   await page.getByText(/resposta correta/i).waitFor();

@@ -1,6 +1,6 @@
 # DUVIDO!
 
-Jogo local para duas pessoas disputarem perguntas numéricas geradas dinamicamente por IA. Não há banco de perguntas hardcoded: a Groq cria pergunta, resposta, categoria, dificuldade e explicação a cada rodada.
+Jogo local para duas a seis pessoas disputarem perguntas numéricas geradas dinamicamente por IA. Não há banco de perguntas hardcoded: a Groq cria pergunta, resposta, categoria, dificuldade e explicação a cada rodada.
 
 ## Requisitos
 
