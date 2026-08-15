@@ -1,3 +1,3 @@
-import { app } from "../server/src/app.ts";
+import { app } from "../server/src/app";
 
 export default app;
